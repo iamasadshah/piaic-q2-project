@@ -1,12 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiShoppingCart, FiX } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { CgMenuRightAlt } from "react-icons/cg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isMobileMenuOpen]);
 
   return (
     <>
@@ -46,7 +54,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="lg:hidden flex justify-between items-center py-5 px-4 bg-white">
+      <div className="lg:hidden flex justify-between items-center py-5 px-4 bg-white ">
         <img src="Logo.webp" alt="logo" width={120} height={80} />
         <button
           className="text-3xl"
@@ -57,7 +65,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center">
+        <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center ">
           <a href="" className="flex justify-center">
             <div className="bg-gray-200 rounded-full p-3 relative">
               <FiShoppingCart className="text-2xl" />
