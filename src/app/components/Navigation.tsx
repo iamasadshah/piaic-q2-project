@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className=" flex flex-col space-y-8 p-4 bg-white h-screen py-32 items-center">
+        <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center">
           <a href="" className="flex justify-center">
             <div className="bg-gray-200 rounded-full p-3 relative">
               <FiShoppingCart className="text-2xl" />
