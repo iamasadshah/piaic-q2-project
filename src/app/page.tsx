@@ -1,11 +1,12 @@
 import Hero from "./components/Hero";
-import Navigation from "./components/Navigation";
+
+import Promotions from "./components/Promotions";
 
 export default function Home() {
   return (
     <>
-      <Navigation />
       <Hero />
+      <Promotions />
     </>
   );
 }

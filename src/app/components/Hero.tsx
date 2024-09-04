@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="text-2xl mt-8 font-[950] md:text-5xl md:mt-10 lg:pr-24">
           An Industrial Take on Streetwear
         </h1>
-        <p className="mt-8 text-sm md:text-base text-gray-600 lg:pr-72">
+        <p className="mt-8 text-sm md:text-base text-gray-600 lg:pr-52">
           Anyone can beat you but no one can beat your outfit as long as you
           wear Dine outfits.
         </p>
