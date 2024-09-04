@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="bg-blue-100 text-lg font-bold text-blue-600 text-center inline px-6 py-2">
           Sale 70%
         </div>
-        <h1 className="text-2xl mt-8 font-[950] md:text-5xl md:mt-10 lg:pr-32">
+        <h1 className="text-2xl mt-8 font-[950] md:text-5xl md:mt-10 lg:pr-24">
           An Industrial Take on Streetwear
         </h1>
         <p className="mt-8 text-sm md:text-base text-gray-600 lg:pr-72">
