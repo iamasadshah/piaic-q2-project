@@ -20,7 +20,7 @@ const Products = () => {
             height="1000"
             className="w-full h-full object-contain"
           />
-          <div className="font-bold text-center mt-1">
+          <div className="font-bold text-center">
             <div>Flex Sweatshirt</div>
             <div>$175</div>
           </div>
