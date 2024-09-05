@@ -10,7 +10,7 @@ const Products = () => {
         <h4 className="font-[900] text-4xl text-black">Check What We Have</h4>
       </div>
 
-      <div className="flex mt-10 lg:px-16 md:justify-center md:mt-4">
+      <div className="flex mt-10 lg:px-16 md:justify-center md:mt-4 lg:mt-10">
         <div className=" lg:basis-1/3 lg:h-[350px] lg:w-[350px] lg:hover:scale-125 hover:scale-105 md:w-[500px] ease-in duration-500">
           <img
             src="product1.webp"
