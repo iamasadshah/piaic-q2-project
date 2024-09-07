@@ -2,9 +2,9 @@ import React from "react";
 
 const Unique = () => {
   return (
-    <div className="mt-20 mb-4 md:px-16 ">
-      <div className="px-6 bg-[#FBFCFF] md:px-16 relative pt-24">
-        <h1 className="text-3xl font-bold row-span-2 md:text-5xl absolute xxxs:-mt-24 xxs:-mt-24 xs:-mt-20 md:-mt-32">
+    <div className="mt-20 mb-4 md:px-16 lg:mt-36">
+      <div className="px-6 bg-[#FBFCFF] md:px-16 relative pt-24 lg:grid lg:grid-cols-2 lg:gap-x-20 ">
+        <h1 className="text-3xl font-bold row-span-2 md:text-5xl absolute xxxs:-mt-24 xxs:-mt-24 xs:-mt-20 md:-mt-32 lg:m-0 lg:text-right lg:-mt-8">
           Unique and Authentic Vintage Designer Jewellery
         </h1>
 
@@ -41,8 +41,8 @@ const Unique = () => {
         {/* =========================================================== */}
 
         <div className=" md:grid md:grid-cols-2 md:gap-x-4">
-          <div className="my-4">
-            <img src="unique.webp" />
+          <div className="my-4 ">
+            <img src="unique.webp" className="lg:rounded-md" />
           </div>
           <div className="text-center md:mt-8 md:text-start text-gray-600">
             <p>
