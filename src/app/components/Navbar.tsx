@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       {/* Large and Tablet Screen Navbar */}
-      <div className="hidden lg:flex justify-between py-5 items-center px-24 bg-white space-x-4 ">
+      <div className="hidden lg:flex justify-between py-5 items-center px-24 bg-white space-x-4 sticky top-0 z-20">
         <img
           src="Logo.webp"
           alt="logo"
@@ -27,18 +27,18 @@ const Navbar = () => {
           height={80}
           className="w-36"
         />
-        <div className="flex gap-8 lg:gap-5 text-[13px]  lg:text-[15px] ">
+        <div className="flex gap-5 text-[15px] ">
           <a href="/">Female</a>
           <a href="/">Male</a>
           <a href="/">Kids</a>
           <a href="/">All Products</a>
         </div>
-        <div className="flex border border-gray-300 rounded-md bg-white lg:w-[30%] xl:w-[35%]">
+        <div className="flex border border-gray-300 rounded-md bg-white w-[35%]">
           <div className="flex items-center p-1 w-full">
             <CiSearch />
             <input
               type="text"
-              className=" text-xs w-full pl-2"
+              className="text-xs w-full pl-2"
               placeholder="What You Looking for"
             />
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center ">
+        <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center">
           <a href="" className="flex justify-center">
             <div className="bg-gray-200 rounded-full p-3 relative">
               <FiShoppingCart className="text-2xl" />
@@ -79,7 +79,6 @@ const Navbar = () => {
           <a href="/">Male</a>
           <a href="/">Kids</a>
           <a href="/">All Products</a>
-          <div className="flex  rounded-md bg-white w-full"></div>
         </div>
       )}
     </>
