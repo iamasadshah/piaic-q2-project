@@ -1,6 +1,7 @@
 import React from "react";
 import { client } from "@/sanity/lib/client";
 import { Image as IImage } from "sanity";
+import { Card } from "@/components/ui/card";
 
 export async function getData() {
   // Getting data from Sanity
@@ -36,12 +37,14 @@ const page = async () => {
     <div>
       {filteredData.map((product: IProduct, index: number) => {
         return (
-          <div key={index}>
-            <h1>{product.title}</h1>
-            <p>{product.type}</p>
-            <p>{product.price}</p>
-            <p>{product.category.name}</p>
-            <img src={product.urlImage} alt={product.title} />
+          <div key={index} className="grid grid-cols-3">
+            <Card>
+              <h1>{product.title}</h1>
+              <p>{product.type}</p>
+              <p>{product.price}</p>
+              <p>{product.category.name}</p>
+              <img src={product.urlImage} alt={product.title} />
+            </Card>
           </div>
         );
       })}
