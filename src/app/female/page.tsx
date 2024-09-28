@@ -1,55 +1,42 @@
 import React from "react";
-import { client } from "@/sanity/lib/client";
-import { Image as IImage } from "sanity";
+import { getData, IProduct } from "@/lib/getData";
 import { Card } from "@/components/ui/card";
+import Image from "next/image";
 
-export async function getData() {
-  // Getting data from Sanity
-  const res = await client.fetch(
-    `*[_type=="product"]{
-      title,
-      type,
-      price,
-      category->{name},
-      image,
-      "urlImage": image.asset->url,
-      id
-    }`
-  );
-  return res;
-}
-
-interface IProduct {
-  title: string;
-  type: string;
-  price: number;
-  category: { name: string };
-  image: IImage;
-  urlImage: string;
-}
-const page = async () => {
+const Page = async (): Promise<JSX.Element> => {
   const data = await getData();
+
   const filteredData = data.filter(
     (product: IProduct) => product.category.name === "Female"
   );
 
   return (
     <div>
-      {filteredData.map((product: IProduct, index: number) => {
-        return (
-          <div key={index} className="grid grid-cols-3">
-            <Card>
-              <h1>{product.title}</h1>
-              <p>{product.type}</p>
-              <p>{product.price}</p>
-              <p>{product.category.name}</p>
-              <img src={product.urlImage} alt={product.title} />
-            </Card>
-          </div>
-        );
-      })}
+      {filteredData.map((product: IProduct, index: number) => (
+        <div key={index} className="grid grid-cols-3">
+          <Card>
+            <h1>{product.title}</h1>
+            <p>{product.type}</p>
+            <p>{product.price}</p>
+            <p>{product.category.name}</p>
+
+            <Image
+              src={product.urlImage}
+              alt={product.title}
+              width={100}
+              height={100}
+            />
+          </Card>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default page;
+export default Page;
+
+// Optional metadata export
+export const metadata = {
+  title: "Female Products",
+  description: "Browse female category products.",
+};
