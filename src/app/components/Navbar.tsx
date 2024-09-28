@@ -28,10 +28,10 @@ const Navbar = () => {
           className="w-36"
         />
         <div className="flex gap-5 text-[15px] ">
-          <a href="/">Female</a>
-          <a href="/">Male</a>
-          <a href="/">Kids</a>
-          <a href="/">All Products</a>
+          <a href="/female">Female</a>
+          <a href="/male">Male</a>
+          <a href="/kids">Kids</a>
+          <a href="/all-products">All Products</a>
         </div>
         <div className="flex border border-gray-300 rounded-md bg-white w-[35%]">
           <div className="flex items-center p-1 w-full">
@@ -75,10 +75,10 @@ const Navbar = () => {
               </span>
             </div>
           </a>
-          <a href="/">Female</a>
-          <a href="/">Male</a>
-          <a href="/">Kids</a>
-          <a href="/">All Products</a>
+          <a href="/female">Female</a>
+          <a href="/male">Male</a>
+          <a href="/kids">Kids</a>
+          <a href="/all-products">All Products</a>
         </div>
       )}
     </>

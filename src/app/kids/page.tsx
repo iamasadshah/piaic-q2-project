@@ -29,7 +29,7 @@ interface IProduct {
 const page = async () => {
   const data = await getData();
   const filteredData = data.filter(
-    (product: IProduct) => product.category.name === "Male"
+    (product: IProduct) => product.category.name === "Kids"
   );
 
   return (
