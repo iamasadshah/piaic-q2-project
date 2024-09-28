@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Promotions = () => {
   return (
@@ -15,7 +16,13 @@ const Promotions = () => {
               <br />
               <b className="md:text-lg">For the Summer Season</b>
             </p>
-            <img src="event1.webp" className="h-full" />
+            <Image
+              src="/event1.webp"
+              className="h-full"
+              width={200}
+              alt="event"
+              height={200}
+            />
           </div>
           <div className="bg-black mt-4 text-white text-center pt-8 pb-3 px-4 xl:h-[50%]">
             <h1 className="text-3xl font-bold pb-6 ">GET 30% OFF </h1>
@@ -31,7 +38,12 @@ const Promotions = () => {
             <p className="text-center font-semibold pb-3">Flex Sweatshirt</p>
             <p className="line-through">$100.00</p>
             <p className="font-semibold">$75.00</p>
-            <img src="event2.webp" alt="Flex-Sweatshirt" />
+            <Image
+              src="/event2.webp"
+              alt="Flex-Sweatshirt"
+              width={200}
+              height={200}
+            />
           </div>
           <div className="bg-[#D7D7D9] pt-6 text-center">
             <p className="text-center font-semibold pb-3">
@@ -39,7 +51,12 @@ const Promotions = () => {
             </p>
             <p className="line-through">$225.00</p>
             <p className="font-semibold">$190.00</p>
-            <img src="event3.webp" alt="Flex-Push-Button-Bomber" />
+            <Image
+              src="/event3.webp"
+              alt="Flex-Push-Button-Bomber"
+              width={200}
+              height={200}
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiShoppingCart, FiX } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
@@ -20,11 +20,11 @@ const Navbar = () => {
     <>
       {/* Large and Tablet Screen Navbar */}
       <div className="hidden lg:flex justify-between py-5 items-center px-24 bg-white space-x-4 sticky top-0 z-20">
-        <img
-          src="Logo.webp"
+        <Image
+          src="/Logo.webp"
           alt="logo"
-          width={120}
-          height={80}
+          width={200}
+          height={200}
           className="w-36"
         />
         <div className="flex gap-5 text-[15px] ">
@@ -56,7 +56,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
 
       <div className="lg:hidden flex justify-between items-center py-5 px-4 bg-white ">
-        <img src="Logo.webp" alt="logo" width={120} height={80} />
+        <Image src="/Logo.webp" alt="logo" width={130} height={130} />
         <button
           className="text-3xl"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

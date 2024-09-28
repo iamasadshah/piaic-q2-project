@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Products = () => {
   return (
@@ -12,12 +13,12 @@ const Products = () => {
 
       <div className="flex mt-10 lg:px-16 md:justify-center md:mt-4 lg:mt-10">
         <div className=" lg:basis-1/3 lg:h-[350px] lg:w-[350px] lg:hover:scale-125 hover:scale-105 md:w-[500px] ease-in duration-500">
-          <img
-            src="product1.webp"
+          <Image
+            src="/product1.webp"
             alt="Flex Sweatshirt"
             loading="lazy"
-            width="800"
-            height="1000"
+            width={200}
+            height={200}
             className="w-full h-full object-contain"
           />
           <div className="font-bold text-center">
@@ -27,12 +28,12 @@ const Products = () => {
         </div>
 
         <div className="hidden lg:flex lg:flex-col lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
-          <img
-            src="product2.webp"
+          <Image
+            src="/product2.webp"
             alt="Flex Sweatshirt"
             loading="lazy"
-            width="800"
-            height="1000"
+            width={200}
+            height={200}
             className="w-full h-full object-contain"
           />
           <div className="font-bold text-center mt-2">
@@ -42,12 +43,12 @@ const Products = () => {
         </div>
 
         <div className="hidden lg:flex lg:flex-col  lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
-          <img
-            src="product3.webp"
+          <Image
+            src="/product3.webp"
             alt="Flex Sweatshirt"
             loading="lazy"
-            width="800"
-            height="1000"
+            width={200}
+            height={200}
             className="w-full h-full object-contain"
           />
           <div className="font-bold text-center mt-2">

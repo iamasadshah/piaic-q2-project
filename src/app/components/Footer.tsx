@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
@@ -6,7 +7,7 @@ const Footer = () => {
   return (
     <div className="px-4 my-20 md:grid md:grid-cols-2 md:gap-x-44 md:justify-center md:items-center md:px-24 lg:grid-cols-4 lg:gap-x-10  lg:items-start lg:justify-center">
       <div className="space-y-2 mb-4">
-        <img src="Logo.webp" />
+        <Image src="/Logo.webp" alt="logo" width={200} height={200} />
         <p className="text-gray-400">
           Small, artisan label that offers a thoughtfully curated collection of
           high quality everyday essentials made.

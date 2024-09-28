@@ -1,5 +1,6 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -20,15 +21,41 @@ const Hero = () => {
           <a href="#">Start Shopping</a>
         </button>
         <div className="mt-8 flex space-x-4 justify-center items-center md:space-x-12">
-          <img width={50} src="Featured1.webp" className="md:w-28" />
-          <img width={50} src="Featured2.webp" className="md:w-28" />
-          <img width={50} src="Featured3.webp" className="md:w-28" />
-          <img width={50} src="Featured4.webp" className="md:w-28" />
+          <Image
+            alt="featurd"
+            width={200}
+            height={200}
+            src="/Featured1.webp"
+            className="md:w-28"
+          />
+          <Image
+            alt="featurd"
+            width={200}
+            height={200}
+            src="/Featured2.webp"
+            className="md:w-28"
+          />
+          <Image
+            alt="featurd"
+            width={200}
+            height={200}
+            src="/Featured3.webp"
+            className="md:w-28"
+          />
+          <Image
+            alt="featurd"
+            width={50}
+            height={50}
+            src="/Featured4.webp"
+            className="md:w-28"
+          />
         </div>
       </div>
       <div className="hidden bg-[#FFECE3] lg:flex lg:basis-[60%] justify-center items-center pb-32 px-32 rounded-full aspect-square relative">
-        <img
-          src="Hero-image.webp"
+        <Image
+          src="/Hero-image.webp"
+          height={200}
+          width={200}
           alt="Hero-Image"
           className="absolute inset-0 -mt-14 object-cover w-full h-full"
         />

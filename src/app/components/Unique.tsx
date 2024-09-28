@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 const Unique = () => {
   return (
     <div className="mt-20 mb-4 md:px-16 lg:mt-36 md:mt-24">
@@ -42,7 +42,12 @@ const Unique = () => {
 
         <div className=" md:grid md:grid-cols-2 md:gap-x-4">
           <div className="my-4 ">
-            <img src="unique.webp" alt="unique title" />
+            <Image
+              src="/unique.webp"
+              alt="unique title"
+              width={200}
+              height={200}
+            />
           </div>
           <div className="text-center md:mt-8 md:text-start text-gray-600">
             <p>
