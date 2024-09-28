@@ -4,7 +4,7 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="px-4 my-20  md:grid md:grid-cols-2 md:gap-x-44 md:justify-center md:items-center md:px-24 lg:grid-cols-4 lg:gap-x-10  lg:items-start lg:justify-center">
+    <div className="px-4 my-20 md:grid md:grid-cols-2 md:gap-x-44 md:justify-center md:items-center md:px-24 lg:grid-cols-4 lg:gap-x-10  lg:items-start lg:justify-center">
       <div className="space-y-2 mb-4">
         <img src="Logo.webp" />
         <p className="text-gray-400">

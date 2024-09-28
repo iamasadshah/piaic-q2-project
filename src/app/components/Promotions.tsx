@@ -11,7 +11,7 @@ const Promotions = () => {
         <div>
           <div className="grid grid-cols-2 bg-gray-300 pl-10 pt-3">
             <p className="md:mt-10 ">
-              <b className="text-3xl font-bol md:text-4xl">GET UP TO 60%</b>{" "}
+              <b className="text-3xl font-bol md:text-4xl">GET UP TO 60%</b>
               <br />
               <b className="md:text-lg">For the Summer Season</b>
             </p>

@@ -24,7 +24,7 @@ const Unique = () => {
           </div>
           <div>
             {" "}
-            <p className="font-bold ">Modern Fashion Design</p>
+            <p className="font-bold  ">Modern Fashion Design</p>
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
@@ -42,7 +42,7 @@ const Unique = () => {
 
         <div className=" md:grid md:grid-cols-2 md:gap-x-4">
           <div className="my-4 ">
-            <img src="unique.webp" className="lg:rounded-md" />
+            <img src="unique.webp" />
           </div>
           <div className="text-center md:mt-8 md:text-start text-gray-600">
             <p>

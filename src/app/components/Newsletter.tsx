@@ -4,7 +4,7 @@ const Newsletter = () => {
   return (
     <div className="relative flex flex-col items-center justify-center py-10 px-4">
       {/* Background text */}
-      <h1 className="absolute text-6xl sm:text-[6rem] md:text-7xl lg:text-[7rem] font-bold text-gray-100  text-center z-0">
+      <h1 className="absolute text-6xl sm:text-[6rem] md:text-7xl lg:text-[7rem] font-bold text-gray-100 text-center z-0">
         Newsletter
       </h1>
 

@@ -26,7 +26,7 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="lg:flex lg:flex-col hidden lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
+        <div className="hidden lg:flex lg:flex-col lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
           <img
             src="product2.webp"
             alt="Flex Sweatshirt"
@@ -41,7 +41,7 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="lg:flex lg:flex-col hidden lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
+        <div className="hidden lg:flex lg:flex-col  lg:basis-1/3 lg:h-[350px] lg:w-[350px] hover:scale-125 ease-in duration-500">
           <img
             src="product3.webp"
             alt="Flex Sweatshirt"

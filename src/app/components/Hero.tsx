@@ -26,11 +26,11 @@ const Hero = () => {
           <img width={50} src="Featured4.webp" className="md:w-28" />
         </div>
       </div>
-      <div className="bg-[#FFECE3] lg:basis-[60%] md:basis-[60%] hidden  lg:flex justify-center items-center pb-32 px-32 rounded-full aspect-square relative">
+      <div className="hidden bg-[#FFECE3] lg:flex lg:basis-[60%] justify-center items-center pb-32 px-32 rounded-full aspect-square relative">
         <img
           src="Hero-image.webp"
           alt="Hero-Image"
-          className="absolute inset-0 -mt-14 object-cover w-full h-full "
+          className="absolute inset-0 -mt-14 object-cover w-full h-full"
         />
       </div>
     </div>
