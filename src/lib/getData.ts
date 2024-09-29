@@ -13,6 +13,7 @@ export interface IProduct {
 
 export async function getData(): Promise<IProduct[]> {
   const res = await client.fetch(
+
     `*[_type=="product"]{
       title,
       type,
