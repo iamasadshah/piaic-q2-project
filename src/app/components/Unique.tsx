@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Unique = () => {
   return (
     <div className="mt-20 mb-4 md:px-16 lg:mt-36 md:mt-24">
@@ -56,9 +57,11 @@ const Unique = () => {
               color is the actual natural color of the fiber, undyed and 100%
               traceable.
             </p>
-            <button className="bg-black text-white rounded-md font-semibold px-10 py-2 mt-2 hover:text-black hover:bg-white hover:ring-2 hover:ring-black">
-              See All Products
-            </button>
+            <Link href={"/all-products"}>
+              <button className="bg-black text-white rounded-md font-semibold px-10 py-2 mt-2 hover:text-black hover:bg-white hover:ring-2 hover:ring-black">
+                See All Products
+              </button>
+            </Link>
           </div>
         </div>
       </div>
