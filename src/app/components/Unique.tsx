@@ -42,7 +42,7 @@ const Unique = () => {
         {/* =========================================================== */}
 
         <div className=" md:grid md:grid-cols-2 md:gap-x-4">
-          <div className="my-4 ">
+          <div className="my-4 flex justify-center items-center">
             <Image
               src="/unique.webp"
               alt="unique title"
