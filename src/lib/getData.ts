@@ -4,6 +4,7 @@ import { Image as IImage } from "sanity";
 
 export interface IProduct {
   title: string;
+  slug: string;
   type: string;
   price: number;
   category: { name: string };
@@ -11,18 +12,18 @@ export interface IProduct {
   urlImage: string;
 }
 
-export async function getData(): Promise<IProduct[]> {
-  const res = await client.fetch(
 
-    `*[_type=="product"]{
-      title,
-      type,
-      price,
-      category->{name},
-      image,
-      "urlImage": image.asset->url,
-      id
-    }`
-  );
-  return res;
-}
+
+export const getData = async (): Promise<IProduct[]> => {
+  const query = `*[_type == "product"]{
+    title, // We will use the title for routing
+    type,
+    price,
+    category->{name},
+    "urlImage": image.asset->url
+  }`;
+
+  const data = await client.fetch(query);
+  return data;
+};
+
