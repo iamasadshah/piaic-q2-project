@@ -60,34 +60,45 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
 
-@layer components {
-  .container {
-    @apply grid grid-cols-1 md:grid-cols-2 text-center justify-center place-items-center md:gap-4 md:mx-4 lg:grid-cols-3 gap-y-4 mx-2;
+  /* Hide scrollbar for all browsers */
+  /* Global scrollbar settings */
+  html,
+  body {
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .card {
-    @apply flex flex-col w-full justify-center items-center mx-auto;
+
+  /* For Chrome, Safari, and Opera */
+  html::-webkit-scrollbar {
+    display: none;
   }
-  .product-image {
-    @apply rounded-sm h-40 w-[155px];
-  }
-  .product-title {
-    @apply text-lg font-bold;
-  }
-  .product-category {
-    @apply text-xs text-gray-600 font-semibold;
-  }
-  .product-type {
-    @apply font-semibold text-gray-900;
-  }
-  .product-price {
-    @apply text-lg font-bold;
-  }
-  .product-button {
-    @apply text-white bg-black px-6 rounded-md py-1 hover:text-black hover:bg-white hover:ring-2 hover:ring-black;
+
+  @layer components {
+    .container {
+      @apply grid grid-cols-1 md:grid-cols-2 text-center justify-center place-items-center md:gap-4 md:mx-4 lg:grid-cols-3 gap-y-4 mx-2;
+    }
+    .card {
+      @apply flex flex-col w-full justify-center items-center mx-auto;
+    }
+    .product-image {
+      @apply rounded-sm h-40 w-[155px];
+    }
+    .product-title {
+      @apply text-lg font-bold;
+    }
+    .product-category {
+      @apply text-xs text-gray-600 font-semibold;
+    }
+    .product-type {
+      @apply font-semibold text-gray-900;
+    }
+    .product-price {
+      @apply text-lg font-bold;
+    }
+    .product-button {
+      @apply text-white bg-black px-6 rounded-md py-1 hover:text-black hover:bg-white hover:ring-2 hover:ring-black;
+    }
   }
 }
