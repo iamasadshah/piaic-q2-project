@@ -8,7 +8,7 @@ import Unique from "./components/Unique";
 
 export default function Home() {
   return (
-    <div className="no-scrollbar">
+    <div>
       <Hero />
       <Promotions />
       <Products />
