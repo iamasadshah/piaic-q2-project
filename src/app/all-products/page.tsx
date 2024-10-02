@@ -11,11 +11,9 @@ const Page = async (): Promise<JSX.Element> => {
     <div>
       <h1 className="text-center text-lg">All Products</h1>
 
-      <div className="container grid grid-cols-2 gap-4">
-        {/* Grid with 2 columns and some spacing */}
-
+      <div className="container">
         {data.map((product: IProduct, index: number) => (
-          <Card key={index} className="p-4 card">
+          <Card key={index} className=" card">
             <Image
               src={product.urlImage}
               alt={product.title}
@@ -30,7 +28,7 @@ const Page = async (): Promise<JSX.Element> => {
             <p className="product-price">$ {product.price}</p>
 
             {/* Link to the dynamic product page */}
-            <Link href={`/product/${product.slug}`}>
+            <Link href={`/all-products/${product.slug}`}>
               <button className="product-button">Get Info</button>
             </Link>
           </Card>

@@ -2,23 +2,29 @@ import { client } from "@/sanity/lib/client";
 import { IProduct } from "@/lib/getData";
 import Image from "next/image";
 
-// This function fetches the data for a single product based on the slug
+// Fetch data for a single product based on the slug
 async function getProductData(slug: string): Promise<IProduct | null> {
-  const query = `*[_type=="product" && slug.current == $slug][0]{
+  const query = `*[_type == "product" && slug.current == $slug][0]{
     title,
     type,
     price,
     category->{name},
     image,
-    "urlImage": image.asset->url,
-    id
+    "urlImage": image.asset->url
   }`;
+
   const product = await client.fetch(query, { slug });
+
+  // Log the fetched product to debug any issues
+  console.log("Fetched product data:", product);
+
   return product;
 }
 
 // The product page component
 const ProductPage = async ({ params }: { params: { slug: string } }) => {
+  console.log("Received slug:", params.slug); // Add logging to debug slug
+
   const product = await getProductData(params.slug);
 
   if (!product) {
@@ -44,12 +50,16 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
 
 export default ProductPage;
 
-// To generate the static paths for all products based on slug
+// Generate static paths for all products based on slug
 export async function generateStaticParams() {
-  const query = `*[_type=="product"]{
+  const query = `*[_type == "product"]{
     "slug": slug.current
   }`;
+
   const products = await client.fetch(query);
+
+  // Log to verify the products and slugs
+  console.log("Generated static params:", products);
 
   return products.map((product: { slug: string }) => ({
     slug: product.slug,

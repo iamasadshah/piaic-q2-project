@@ -77,10 +77,10 @@
 
   @layer components {
     .container {
-      @apply grid grid-cols-1 md:grid-cols-2 text-center justify-center place-items-center md:gap-4 md:mx-4 lg:grid-cols-3 gap-y-4 mx-2;
+      @apply grid justify-center items-center grid-cols-1 md:grid-cols-2 text-center md:gap-4 md:mx-4 lg:grid-cols-3 gap-y-4 mx-2;
     }
     .card {
-      @apply flex flex-col w-full justify-center items-center mx-auto;
+      @apply flex flex-col justify-center items-center mx-auto;
     }
     .product-image {
       @apply rounded-sm h-40 w-[155px];

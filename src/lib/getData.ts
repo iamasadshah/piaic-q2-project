@@ -18,7 +18,6 @@ export const getData = async (): Promise<IProduct[]> => {
   const query = `*[_type == "product"]{
     title, // We will use the title for routing
     type,
-    
     price,
     category->{name},
     "urlImage": image.asset->url
