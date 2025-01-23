@@ -10,20 +10,22 @@ export interface IProduct {
   category: { name: string };
   image: IImage;
   urlImage: string;
+  description?: string;  // Making it optional with ?
 }
 
 
 
 export const getData = async (): Promise<IProduct[]> => {
   const query = `*[_type == "product"]{
-    title, // We will use the title for routing
+    title,
+    "slug": slug.current, // Get the slug from slug.current
     type,
     price,
     category->{name},
-    "urlImage": image.asset->url
+    "urlImage": image.asset->url,
+    description
   }`;
 
   const data = await client.fetch(query);
   return data;
 };
-

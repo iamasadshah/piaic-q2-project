@@ -6,8 +6,11 @@ import { FiShoppingCart, FiX } from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import { CgMenuRightAlt } from "react-icons/cg";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 
 const Navbar = () => {
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -48,14 +51,18 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <a href="">
-          <div className="bg-gray-200 rounded-full p-3 relative">
-            <FiShoppingCart className="text-2xl" />
-            <span className="absolute bg-[#f02d34] rounded-full w-5 h-5 text-center top-0 right-0 text-white">
-              0
-            </span>
-          </div>
-        </a>
+        <div className="relative">
+          <Link href="/cart" className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
+            <div className="relative">
+              <FiShoppingCart className="text-2xl" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#f02d34] rounded-full w-5 h-5 text-center  text-white">
+                  {cartCount}
+                </span>
+              )}
+            </div>
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Navbar */}
@@ -74,12 +81,14 @@ const Navbar = () => {
 
       {mobileMenuOpen && (
         <div className="lg:hidden flex flex-col space-y-8 p-4 bg-white h-screen py-20 md:py-32 items-center">
-          <a href="" className="flex justify-center">
-            <div className="bg-gray-200 rounded-full p-3 relative">
+          <a href="/cart" className="flex justify-center">
+            <div className="relative">
               <FiShoppingCart className="text-2xl" />
-              <span className="absolute bg-[#f02d34] rounded-full w-5 h-5 text-center top-0 right-0 text-white">
-                0
-              </span>
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-[#f02d34] rounded-full w-5 h-5 text-center  text-white">
+                  {cartCount}
+                </span>
+              )}
             </div>
           </a>
           <a href="/female">Female</a>
