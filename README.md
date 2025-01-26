@@ -17,6 +17,7 @@ A full-stack e-commerce platform built with Next.js 14, featuring a modern UI, S
 ## 🛠️ Tech Stack
 
 - **Frontend**:
+
   - Next.js 14
   - React 18
   - TypeScript
@@ -25,6 +26,7 @@ A full-stack e-commerce platform built with Next.js 14, featuring a modern UI, S
   - React Icons
 
 - **Backend & CMS**:
+
   - Sanity.io
   - Next-Sanity Integration
 
@@ -36,12 +38,14 @@ A full-stack e-commerce platform built with Next.js 14, featuring a modern UI, S
 ## 🚀 Getting Started
 
 1. **Clone the repository**
+
    ```bash
-   git clone [your-repo-link]
+   git clone [https://github.com/iamasadshah/piaic-q2-project.git]
    cd dine-market
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
@@ -50,6 +54,7 @@ A full-stack e-commerce platform built with Next.js 14, featuring a modern UI, S
    Create a `.env` file in the root directory and add necessary environment variables.
 
 4. **Run the development server**
+
    ```bash
    npm run dev
    ```
@@ -80,7 +85,7 @@ dine-market/
 
 The application can be easily deployed on Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/dine-market)
+[![Deploy with Vercel](https://vercel.com/button)]
 
 ## 📝 License
 
@@ -88,7 +93,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👨‍💻 Author
 
-Your Name - [Your Portfolio/GitHub]
+Asad Shah - [[Portfolio](https://iamasadshah-ibnerafi.vercel.app/)]
 
 ---
 
