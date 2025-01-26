@@ -40,7 +40,7 @@ A full-stack e-commerce platform built with Next.js 14, featuring a modern UI, S
 1. **Clone the repository**
 
    ```bash
-   git clone [https://github.com/iamasadshah/piaic-q2-project.git]
+   git clone https://github.com/iamasadshah/piaic-q2-project.git
    cd dine-market
    ```
 
@@ -85,7 +85,7 @@ dine-market/
 
 The application can be easily deployed on Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)]
+![Deploy with Vercel](https://vercel.com/button)
 
 ## 📝 License
 
